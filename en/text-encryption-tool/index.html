@@ -122,80 +122,183 @@
   <div class="col-sm-10 py-4 mx-auto">
     <h1 class="mb-0 py-2">Online Text Encryption Tool</h1>
     <p class="bd-lead">This is a text encryption site.</p>
-    <div data-type="crypto" id="root"></div>
+    <div data-type="crypto">
+        <div class="row mb-2">
+            <div class="col-12 mb-3"><strong>Select an algorithm below.</strong></div>
+            <div class="col-12 mb-3">
+                <select class="form-select" aria-label="Default select example">
+                    <option value="">select.</option>
+                </select>
+
+                <label for="key" class="form-label">key</label>
+                <input id="key" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3"><textarea class="form-control" placeholder="Please enter a value" id="floatingTextarea2" style="height: 10rem;"></textarea></div>
+            <div class="col-12 mb-3"><textarea class="form-control" placeholder="Result" id="floatingTextarea3" style="height: 10rem;"></textarea></div>
+            <div class="col-12 mb-3 text-center"><button type="button" class="btn btn-primary" disabled="">Copy results to clipboard</button></div>
+        </div>
+    </div>
   </div>
   <div class="col-sm-10 py-4 mx-auto">
     <p>This is a text encryption tool. It offers various encoding and hashing functions such as base64, MD5, SHA-1, SHA-256, SHA-512, SHA-224, SHA-384, SHA-3, and RIPEMD. Use it conveniently as an online tool.</p>
+
     <h2 class="py-2">Base64 Encoding</h2>
-    <p>Base64 encoding converts binary data into safe ASCII text. This conversion is mainly used for storing or transmitting images or binary files as text. Base64 encoding enhances data security and ensures data integrity.</p>
+    <p>Base64 encoding converts binary data into safe ASCII text. This conversion is mainly used for storing or transmitting images or binary files as text. Base64 encoding enhances data security and ensures data integrity. 
+    <br /><a href="https://en.wikipedia.org/wiki/Base64" target="_blank">Base64 Encoding - Wikipedia</a> 
+    <br /><a href="https://datatracker.ietf.org/doc/html/rfc4648" target="_blank">Base64 Encoding - RFC 4648</a></p>
+    
     <h2 class="py-2">Base64 Decoding</h2>
-    <p>Base64 decoding is the process of converting Base64 encoded data back to its original binary format. This is essential for restoring data that has been encoded in Base64 and is necessary for safely transmitting or storing data.</p>
+    <p>Base64 decoding is the process of converting Base64 encoded data back to its original binary format. This is essential for restoring data that has been encoded in Base64 and is necessary for safely transmitting or storing data. 
+    <br /><a href="https://en.wikipedia.org/wiki/Base64#Decoding_Base64" target="_blank">Base64 Decoding - Wikipedia</a></p>
+    
     <h2 class="py-2">MD5 Hashing</h2>
-    <p>MD5 is a message digest algorithm that creates a unique hash value for data. It is mainly used to verify data integrity and check for unauthorized changes. However, due to security vulnerabilities, it is not recommended for secure password storage.</p>
+    <p>MD5 is a message digest algorithm that creates a unique hash value for data. It is mainly used to verify data integrity and check for unauthorized changes. However, due to security vulnerabilities, it is not recommended for secure password storage. 
+    <br /><a href="https://en.wikipedia.org/wiki/MD5" target="_blank">MD5 - Wikipedia</a> 
+    <br /><a href="https://datatracker.ietf.org/doc/html/rfc1321" target="_blank">MD5 - RFC 1321</a></p>
+    
     <h2 class="py-2">SHA-1 Hashing</h2>
-    <p>SHA-1 is one of the hashing algorithms that provides secure data hashing. However, due to collision possibilities and security vulnerabilities, its safety is not currently assured.</p>
+    <p>SHA-1 is one of the hashing algorithms that provides secure data hashing. However, due to collision possibilities and security vulnerabilities, its safety is not currently assured. 
+    <br /><a href="https://en.wikipedia.org/wiki/SHA-1" target="_blank">SHA-1 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/projects/hash-functions/sha-1" target="_blank">SHA-1 - NIST</a></p>
+    
     <h2 class="py-2">SHA-256 Hashing</h2>
-    <p>SHA-256 is one of the secure hashing algorithms that generates a secure hash value for data. It is mainly used for data integrity verification and data security.</p>
+    <p>SHA-256 is one of the secure hashing algorithms that generates a secure hash value for data. It is mainly used for data integrity verification and data security. 
+    <br /><a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-256 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-256 - NIST</a></p>
+    
     <h2 class="py-2">SHA-224 Hashing</h2>
-    <p>SHA-224 is similar to SHA-256 but generates shorter hash values. It is used for data security and integrity checks.</p>
+    <p>SHA-224 is similar to SHA-256 but generates shorter hash values. It is used for data security and integrity checks. 
+    <br /><a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-224 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-224 - NIST</a></p>
+    
     <h2 class="py-2">SHA-512 Hashing</h2>
-    <p>SHA-512 is part of the SHA-2 family and is a secure hashing algorithm that generates longer hash values. It is used to ensure data integrity and securely store passwords.</p>
+    <p>SHA-512 is part of the SHA-2 family and is a secure hashing algorithm that generates longer hash values. It is used to ensure data integrity and securely store passwords. 
+    <br /><a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-512 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-512 - NIST</a></p>
+    
     <h2 class="py-2">SHA-384 Hashing</h2>
-    <p>SHA-384 is similar to SHA-512 but generates shorter hash values. It is used for data security and integrity checks.</p>
+    <p>SHA-384 is similar to SHA-512 but generates shorter hash values. It is used for data security and integrity checks. 
+    <br /><a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-384 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-384 - NIST</a></p>
+    
     <h2 class="py-2">SHA-3 Hashing</h2>
-    <p>SHA-3 is a new family of hashing algorithms used for secure data hashing. It is suitable for data security and integrity verification.</p>
+    <p>SHA-3 is a new family of hashing algorithms used for secure data hashing. It is suitable for data security and integrity verification. 
+    <br /><a href="https://en.wikipedia.org/wiki/SHA-3" target="_blank">SHA-3 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/202/final" target="_blank">SHA-3 - NIST</a></p>
+    
     <h2 class="py-2">RIPEMD-160 Hashing</h2>
-    <p>RIPEMD-160 is another hashing algorithm used in blockchain applications like Bitcoin addresses. It is used to enhance data security and perform integrity checks.</p>
+    <p>RIPEMD-160 is another hashing algorithm used in blockchain applications like Bitcoin addresses. It is used to enhance data security and perform integrity checks. 
+    <br /><a href="https://en.wikipedia.org/wiki/RIPEMD" target="_blank">RIPEMD-160 - Wikipedia</a> 
+    <br /><a href="https://homes.esat.kuleuven.be/~bosselae/ripemd160/" target="_blank">RIPEMD-160 - Specification</a></p>
+    
     <h2 class="py-2">URI Encoding and Decoding</h2>
     <h3>encodeURI</h3>
-    <p>The encodeURI function safely encodes URI components for use in the address bar. It is essential in web development for handling address links and query strings.</p>
+    <p>The encodeURI function safely encodes URI components for use in the address bar. It is essential in web development for handling address links and query strings. 
+    <br /><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" target="_blank">encodeURI - MDN Web Docs</a></p>
     <h3>encodeURIComponent</h3>
-    <p>The encodeURIComponent function safely encodes URI components for use as values in query strings. It is necessary in web development for handling URLs and web forms.</p>
+    <p>The encodeURIComponent function safely encodes URI components for use as values in query strings. It is necessary in web development for handling URLs and web forms. 
+    <br /><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" target="_blank">encodeURIComponent - MDN Web Docs</a></p>
     <h3>decodeURI</h3>
-    <p>The decodeURI function decodes URI components encoded with encodeURI back to their original strings. It is used in web development for handling the address bar and URIs.</p>
+    <p>The decodeURI function decodes URI components encoded with encodeURI back to their original strings. It is used in web development for handling the address bar and URIs. 
+    <br /><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI" target="_blank">decodeURI - MDN Web Docs</a></p>
     <h3>decodeURIComponent</h3>
-    <p>The decodeURIComponent function decodes URI components encoded with encodeURIComponent back to their original strings. It is essential in web development for handling URLs and data communication.</p>
+    <p>The decodeURIComponent function decodes URI components encoded with encodeURIComponent back to their original strings. It is essential in web development for handling URLs and data communication. 
+    <br /><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent" target="_blank">decodeURIComponent - MDN Web Docs</a></p>
     <p>These tools and functions play a crucial role in data processing and security tasks. They enhance data security and privacy, and help maintain data integrity.</p>
+    
     <h2 class="py-2">HmacMD5</h2>
     <h3>HMAC-MD5 (Hash-based Message Authentication Code – MD5)</h3>
-    <p>HmacMD5 is a hash-based algorithm used to verify message integrity. It uses the MD5 hash function to check data integrity. However, currently, MD5 is considered insecure, and its use is discouraged.</p>
+    <p>HmacMD5 is a hash-based algorithm used to verify message integrity. It uses the MD5 hash function to check data integrity. However, currently, MD5 is considered insecure, and its use is discouraged. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-MD5 - Wikipedia</a> 
+    <br /><a href="https://datatracker.ietf.org/doc/html/rfc2104" target="_blank">HMAC - RFC 2104</a></p>
+    
     <h2 class="py-2">HmacRIPEMD160</h2>
     <h3>HMAC-RIPEMD160 (Hash-based Message Authentication Code – RIPEMD-160)</h3>
-    <p>HmacRIPEMD160 is an encryption algorithm that uses the RIPEMD-160 hash function to verify message integrity through HMAC (Hash-based Message Authentication Code). It is used to enhance data security and integrity.</p>
+    <p>HmacRIPEMD160 is an encryption algorithm that uses the RIPEMD-160 hash function to verify message integrity through HMAC (Hash-based Message Authentication Code). It is used to enhance data security and integrity. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-RIPEMD160 - Wikipedia</a> 
+    <br /><a href="https://homes.esat.kuleuven.be/~bosselae/ripemd160/" target="_blank">RIPEMD-160 - Specification</a></p>
+    
     <h2 class="py-2">HmacSHA1</h2>
     <h3>HMAC-SHA-1 (Hash-based Message Authentication Code – SHA-1)</h3>
-    <p>HmacSHA1 is an HMAC algorithm that uses the SHA-1 hash function to protect data integrity. However, due to security vulnerabilities, the use of SHA-1 is currently discouraged.</p>
+    <p>HmacSHA1 is an HMAC algorithm that uses the SHA-1 hash function to protect data integrity. However, due to security vulnerabilities, the use of SHA-1 is currently discouraged. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-SHA-1 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/projects/hash-functions/sha-1" target="_blank">SHA-1 - NIST</a></p>
+    
     <h2 class="py-2">HmacSHA224</h2>
     <h3>HMAC-SHA-224 (Hash-based Message Authentication Code – SHA-224)</h3>
-    <p>HmacSHA224 is an HMAC algorithm based on the SHA-224 hash function to enhance data security. It provides data integrity using a stronger hash function.</p>
+    <p>HmacSHA224 is an HMAC algorithm based on the SHA-224 hash function to enhance data security. It provides data integrity using a stronger hash function. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-SHA-224 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-224 - NIST</a></p>
+    
     <h2 class="py-2">HmacSHA256</h2>
     <h3>HMAC-SHA-256 (Hash-based Message Authentication Code – SHA-256)</h3>
-    <p>HmacSHA256 is an HMAC algorithm that uses the SHA-256 hash function to provide secure data integrity. SHA-256 is currently widely used and is one of the secure options.</p>
+    <p>HmacSHA256 is an HMAC algorithm that uses the SHA-256 hash function to provide secure data integrity. SHA-256 is currently widely used and is one of the secure options. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-SHA-256 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-256 - NIST</a></p>
+    
     <h2 class="py-2">HmacSHA3</h2>
     <h3>HMAC-SHA-3 (Hash-based Message Authentication Code – SHA-3)</h3>
-    <p>HmacSHA3 is an HMAC algorithm based on the SHA-3 hash function, one of the latest security standards. It provides secure and reliable data integrity verification.</p>
+    <p>HmacSHA3 is an HMAC algorithm based on the SHA-3 hash function, one of the latest security standards. It provides secure and reliable data integrity verification. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-SHA-3 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/202/final" target="_blank">SHA-3 - NIST</a></p>
+    
     <h2 class="py-2">HmacSHA384</h2>
     <h3>HMAC-SHA-384 (Hash-based Message Authentication Code – SHA-384)</h3>
-    <p>HmacSHA384 is an HMAC algorithm that uses the SHA-384 hash function to keep data secure. It offers a high level of data security.</p>
+    <p>HmacSHA384 is an HMAC algorithm that uses the SHA-384 hash function to keep data secure. It offers a high level of data security. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-SHA-384 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-384 - NIST</a></p>
+    
     <h2 class="py-2">HmacSHA512</h2>
     <h3>HMAC-SHA-512 (Hash-based Message Authentication Code – SHA-512)</h3>
-    <p>HmacSHA512 is used to protect data integrity using the SHA-512 hash function. SHA-512 is one of the powerful hash functions used for secure data protection.</p>
+    <p>HmacSHA512 is used to protect data integrity using the SHA-512 hash function. SHA-512 is one of the powerful hash functions used for secure data protection. 
+    <br /><a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC-SHA-512 - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/180/4/final" target="_blank">SHA-512 - NIST</a></p>
+    
     <h2 class="py-2">AES</h2>
     <h3>Advanced Encryption Standard (AES)</h3>
-    <p>The Advanced Encryption Standard (AES) is widely used for data encryption, providing secure and efficient encryption. AES is a symmetric algorithm and plays a critical role in secure data transmission and storage.</p>
+    <p>The Advanced Encryption Standard (AES) is widely used for data encryption, providing secure and efficient encryption. AES is a symmetric algorithm and plays a critical role in secure data transmission and storage. 
+    <br /><a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">Advanced Encryption Standard (AES) - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/fips/197/final" target="_blank">AES - NIST</a></p>
+    
     <h2 class="py-2">TripleDES</h2>
     <h3>Triple Data Encryption Standard (TripleDES)</h3>
-    <p>TripleDES is a symmetric key algorithm that encrypts data three times to provide a high level of security. It was widely used in the past and is still used in some environments.</p>
+    <p>TripleDES is a symmetric key algorithm that encrypts data three times to provide a high level of security. It was widely used in the past and is still used in some environments. 
+    <br /><a href="https://en.wikipedia.org/wiki/Triple_DES" target="_blank">Triple Data Encryption Standard (TripleDES) - Wikipedia</a> 
+    <br /><a href="https://csrc.nist.gov/publications/detail/sp/800-67/rev-2/final" target="_blank">TripleDES - NIST</a></p>
+    
     <h2 class="py-2">RC4</h2>
-    <p>RC4 is used in stream encryption, providing fast encryption but with security issues, so it is recommended to avoid using it. Currently, stronger encryption methods should be considered.</p>
+    <p>RC4 is used in stream encryption, providing fast encryption but with security issues, so it is recommended to avoid using it. Currently, stronger encryption methods should be considered. 
+    <br /><a href="https://en.wikipedia.org/wiki/RC4" target="_blank">RC4 - Wikipedia</a> 
+    <br /><a href="https://datatracker.ietf.org/doc/html/rfc7465" target="_blank">RC4 - RFC 7465</a></p>
+    
     <h2 class="py-2">Rabbit</h2>
-    <p>Rabbit is one of the algorithms used for secure stream encryption. It is one of the strong tools for secure data communication.</p>
+    <p>Rabbit is one of the algorithms used for secure stream encryption. It is one of the strong tools for secure data communication. 
+    <br /><a href="https://en.wikipedia.org/wiki/Rabbit_(cipher)" target="_blank">Rabbit (cipher) - Wikipedia</a></p>
+    
     <h2 class="py-2">RabbitLegacy</h2>
-    <p>RabbitLegacy refers to the previous version of the Rabbit algorithm, and it is currently recommended to avoid using it. The latest version, Rabbit, should be considered.</p>
+    <p>RabbitLegacy refers to the previous version of the Rabbit algorithm, and it is currently recommended to avoid using it. The latest version, Rabbit, should be considered. 
+    <br /><a href="https://www.bouncycastle.org/docs/r1onorg/bc/org/bouncycastle/crypto/engines/RabbitEngine.html" target="_blank">RabbitLegacy - Bouncy Castle API</a></p>
+    
     <p>These algorithms and functions play a crucial role in data security and communication. When selecting, security requirements and performance should be considered. Encryption and data integrity verification are essential parts of protecting sensitive information.</p>
+    
   </div>
 </main>
-
+<script defer src="/assets/index.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const crypto = new MyLibrary.Crypto(
+    "body > div > div > main > div:nth-child(1) > div > div.row.mb-2 > div:nth-child(2) > select"
+    ,"#floatingTextarea2"
+    ,"#floatingTextarea3"
+    ,"#key"
+    ,"[for=key]"
+    ,"body > div > div > main > div:nth-child(1) > div > div:nth-child(2) > div.col-12.mb-3.text-center > button"
+  );
+  crypto.crypto();
+} , { once: true });
+</script>
 
 
 
@@ -207,8 +310,6 @@
 
 
 
-
-<script src="/assets/main.js?ver=2f98065e" defer></script>
 
 
 

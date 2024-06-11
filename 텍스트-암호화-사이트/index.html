@@ -153,6 +153,7 @@
       <p>텍스트 암호화 도구입니다. base64, md5, sha1, sha256, sha512, sha224, sha384, sha3, ripedmd 등 다양한 인코딩 및 해싱 기능을 제공합니다. 편하게 온라인 도구로 사용하세요</p>
       <h2 class="py-2">Base64 인코딩 (Base64 Encoding)</h2>
       <p>Base64 인코딩은 바이너리 데이터를 안전한 ASCII 텍스트로 변환합니다. 이 변환은 이미지나 이진 파일을 텍스트로 저장 또는 전송할 때 주로 사용됩니다. Base64 인코딩은 데이터 보안을 향상시키고 데이터 무결성을 보장합니다.</p>
+      
       <h2 class="py-2">Base64 디코딩 (Base64 Decoding)</h2>
       <p>Base64 디코딩은 Base64로 인코딩된 데이터를 다시 원래의 이진 형식으로 변환하는 프로세스입니다. 이것은 Base64로 인코딩된 데이터를 복원하는 데 필수적이며, 데이터를 안전하게 전송하거나 저장하기 위해 필요합니다.</p>
       <h2 class="py-2">MD5 해싱 (MD5 Hashing)</h2>
@@ -230,9 +231,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ,"#floatingTextarea3"
     ,"#key"
     ,"[for=key]"
+    ,"body > div > div > main > div:nth-child(1) > div > div:nth-child(2) > div.col-12.mb-3.text-center > button"
   );
   crypto.crypto();
-});
+} , { once: true });
 </script>
 
 
