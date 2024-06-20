@@ -114,7 +114,148 @@
     <div class="row justify-content-center">
       
 
-<main class="inner-container"><div class="col-sm-10 py-4 mx-auto"><h1 class="mb-0 py-2">백분율 계산기</h1><p class="bd-lead">백분율 계산기는 주어진 숫자의 백분율을 계산하고 결과를 제공하는 도구입니다.</p><div data-type="percentage" id="root"></div></div><div class="col-sm-10 py-4 mx-auto"><h1>백분율 계산기</h1><p>백분율 계산기는 현대 사회에서 데이터 분석과 의사결정의 필수적인 부분이 되어가고 있습니다. 이 도구는 어떤 값을 기준으로 하는 백분율을 계산하는 데 사용되며, 그 결과는 다양한 분야에서 중요한 역할을 합니다. 그렇다면, 백분율 계산기가 정확히 무엇이고 어떻게 사용되며</p><h2 class="py-2">백분율 계산이란?</h2><p>백분율은 어떤 값이 다른 값에 대해 어느 정도를 차지하는지 나타내는 지표입니다. 이것은 주로 “100으로 나눈 비율”로 표현되며, 수학적으로는 다음과 같이 표현됩니다:</p><p>백분율=부분전체×100백분율=전체부분​×100</p><p>예를 들어, 학업 성적에서 80점을 받았다면, 전체 만점 중에서 80%를 달성했다고 말할 수 있습니다.</p><h2 class="py-2">백분율 계산기의 사용법</h2><p>백분율 계산기를 사용하려면 먼저 두 가지 값, 즉 “기준값”과 “비교값”을 입력해야 합니다. 예를 들어, 판매량을 비교할 때, 이번 달 판매량을 “기준값”으로, 지난 달 판매량을 “비교값”으로 사용합니다. 백분율 계산기는 이러한 값을 기반으로 백분율을 자동으로 계산하여 결과를 제공합니다.</p><ul><li><strong>데이터 시각화</strong>: 백분율을 그래프나 차트로 표현하면 정보를 시각적으로 이해하기 쉽습니다. 사용자들은 콘텐츠를 더 쉽게 이해하고 공유할 수 있습니다.</li><li><strong>정확한 정보 제공</strong>: 백분율 계산을 통해 정확한 정보를 제공하므로 사용자들은 신뢰할 수 있는 데이터를 얻게 됩니다.</li><li><strong>비교와 분석</strong>: 백분율을 사용하면 여러 가지 요소를 비교하고 분석할 수 있습니다. 이는 사용자에게 더 깊은 통찰력을 제공하며, 검색 엔진 랭킹을 높일 수 있습니다.</li></ul><h2 class="py-2">백분율 계산기의 장점</h2><p>백분율 계산기는 다양한 분야에서 활용됩니다. 그 중 일부는 다음과 같습니다:</p><ul><li><strong>학교 및 교육</strong>: 성적, 출석률, 학업 성취도를 비교하고 평가할 때 사용됩니다.</li><li><strong>비즈니스 및 금융</strong>: 매출, 이익, 시장 점유율, 투자 수익률 등의 비즈니스 성과를 추적하고 평가할 때 사용됩니다.</li><li><strong>마케팅</strong>: 마케팅 캠페인의 성과를 분석하고 비교할 때 사용됩니다. 클릭 스루 비율, 전환율, 리텐션 등을 추적할 수 있습니다.</li></ul><h2 class="py-2">백분율 계산기의 활용 예시</h2><ol><li><strong>학교 성적 분석</strong>: 학생의 시험 성적을 백분율로 표시하여 학업 성과를 평가합니다.</li><li><strong>마케팅 효과 분석</strong>: 광고 캠페인의 성과를 백분율로 표현하여 어떤 전략이 효과적인지 확인합니다.</li><li><strong>웹사이트 트래픽 분석</strong>: 웹사이트 트래픽과 사용자의 행동을 백분율로 나타내어 사용자 경험을 개선하고 검색 엔진 랭킹을 향상시킵니다.</li></ol><p></p></div></main>
+<main class="inner-container">
+    <div class="col-sm-10 py-4 mx-auto">
+        <h1 class="mb-0 py-2">백분율 계산기</h1>
+        <p class="bd-lead">백분율 계산기는 주어진 숫자의 백분율을 계산하고 결과를 제공하는 도구입니다.</p>
+
+        <!-- 기본 백분율 계산기 -->
+        <div class="calculator" id="basic-percentage">
+            <h2 class="py-2"  style="font-size: 1.32rem;">기본 백분율 계산기</h2>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="number" id="basic-value" placeholder="값" oninput="calculateBasicPercentage()">
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="number" id="basic-percentage-value" placeholder="백분율 (%)" oninput="calculateBasicPercentage()">
+                </div>
+            </div>
+            <div class="result" id="basic-result"></div>
+        </div>
+        
+        <!-- 백분율 증가 계산기 -->
+        <div class="calculator" id="increase-percentage">
+            <h2 class="py-2"  style="font-size: 1.32rem;">백분율 증가 계산기</h2>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="number" id="increase-value" placeholder="값" oninput="calculateIncreasePercentage()">
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="number" id="increase-percentage-value" placeholder="백분율 (%)" oninput="calculateIncreasePercentage()">
+                </div>
+            </div>
+            <div class="result" id="increase-result"></div>
+        </div>
+        
+        <!-- 백분율 감소 계산기 -->
+        <div class="calculator" id="decrease-percentage">
+            <h2 class="py-2"  style="font-size: 1.32rem;">백분율 감소 계산기</h2>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="number" id="decrease-value" placeholder="값" oninput="calculateDecreasePercentage()">
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="number" id="decrease-percentage-value" placeholder="백분율 (%)" oninput="calculateDecreasePercentage()">
+                </div>
+            </div>
+            <div class="result" id="decrease-result"></div>
+        </div>
+        
+        <!-- 백분율 차이 계산기 -->
+        <div class="calculator" id="difference-percentage">
+            <h2 class="py-2"  style="font-size: 1.32rem;">백분율 차이 계산기</h2>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="number" id="difference-value1" placeholder="첫 번째 값" oninput="calculateDifferencePercentage()">
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="number" id="difference-value2" placeholder="두 번째 값" oninput="calculateDifferencePercentage()">
+                </div>
+            </div>
+            <div class="result" id="difference-result"></div>
+        </div>
+    </div>
+    <div class="col-sm-10 py-4 mx-auto">
+        <h1>백분율 계산기</h1>
+        <p>
+            백분율 계산기는 현대 사회에서 데이터 분석과 의사결정의 필수적인 부분이 되어가고 있습니다. 이 도구는 어떤 값을 기준으로 하는 백분율을 계산하는 데 사용되며, 그 결과는 다양한 분야에서 중요한 역할을 합니다. 그렇다면, 백분율 계산기가
+            정확히 무엇이고 어떻게 사용되며
+        </p>
+        <h2 class="py-2"  style="font-size: 1.32rem;">백분율 계산이란?</h2>
+        <p>백분율은 어떤 값이 다른 값에 대해 어느 정도를 차지하는지 나타내는 지표입니다. 이것은 주로 “100으로 나눈 비율”로 표현되며, 수학적으로는 다음과 같이 표현됩니다:</p>
+        <p>백분율=부분전체×100백분율=전체부분​×100</p>
+        <p>예를 들어, 학업 성적에서 80점을 받았다면, 전체 만점 중에서 80%를 달성했다고 말할 수 있습니다.</p>
+        <h2 class="py-2"  style="font-size: 1.32rem;">백분율 계산기의 사용법</h2>
+        <p>
+            백분율 계산기를 사용하려면 먼저 두 가지 값, 즉 “기준값”과 “비교값”을 입력해야 합니다. 예를 들어, 판매량을 비교할 때, 이번 달 판매량을 “기준값”으로, 지난 달 판매량을 “비교값”으로 사용합니다. 백분율 계산기는 이러한 값을 기반으로
+            백분율을 자동으로 계산하여 결과를 제공합니다.
+        </p>
+        <ul>
+            <li><strong>데이터 시각화</strong>: 백분율을 그래프나 차트로 표현하면 정보를 시각적으로 이해하기 쉽습니다. 사용자들은 콘텐츠를 더 쉽게 이해하고 공유할 수 있습니다.</li>
+            <li><strong>정확한 정보 제공</strong>: 백분율 계산을 통해 정확한 정보를 제공하므로 사용자들은 신뢰할 수 있는 데이터를 얻게 됩니다.</li>
+            <li><strong>비교와 분석</strong>: 백분율을 사용하면 여러 가지 요소를 비교하고 분석할 수 있습니다. 이는 사용자에게 더 깊은 통찰력을 제공하며, 검색 엔진 랭킹을 높일 수 있습니다.</li>
+        </ul>
+        <h2 class="py-2"  style="font-size: 1.32rem;">백분율 계산기의 장점</h2>
+        <p>백분율 계산기는 다양한 분야에서 활용됩니다. 그 중 일부는 다음과 같습니다:</p>
+        <ul>
+            <li><strong>학교 및 교육</strong>: 성적, 출석률, 학업 성취도를 비교하고 평가할 때 사용됩니다.</li>
+            <li><strong>비즈니스 및 금융</strong>: 매출, 이익, 시장 점유율, 투자 수익률 등의 비즈니스 성과를 추적하고 평가할 때 사용됩니다.</li>
+            <li><strong>마케팅</strong>: 마케팅 캠페인의 성과를 분석하고 비교할 때 사용됩니다. 클릭 스루 비율, 전환율, 리텐션 등을 추적할 수 있습니다.</li>
+        </ul>
+        <h2 class="py-2"  style="font-size: 1.32rem;">백분율 계산기의 활용 예시</h2>
+        <ol>
+            <li><strong>학교 성적 분석</strong>: 학생의 시험 성적을 백분율로 표시하여 학업 성과를 평가합니다.</li>
+            <li><strong>마케팅 효과 분석</strong>: 광고 캠페인의 성과를 백분율로 표현하여 어떤 전략이 효과적인지 확인합니다.</li>
+            <li><strong>웹사이트 트래픽 분석</strong>: 웹사이트 트래픽과 사용자의 행동을 백분율로 나타내어 사용자 경험을 개선하고 검색 엔진 랭킹을 향상시킵니다.</li>
+        </ol>
+        <p></p>
+    </div>
+</main>    
+    <script>
+        function calculateBasicPercentage() {
+            const value = parseFloat(document.getElementById('basic-value').value);
+            const percentage = parseFloat(document.getElementById('basic-percentage-value').value);
+            if (!isNaN(value) && !isNaN(percentage)) {
+                const result = value * (percentage / 100);
+                document.getElementById('basic-result').innerText = `결과: ${result}`;
+            } else {
+                document.getElementById('basic-result').innerText = '';
+            }
+        }
+
+        function calculateIncreasePercentage() {
+            const value = parseFloat(document.getElementById('increase-value').value);
+            const percentage = parseFloat(document.getElementById('increase-percentage-value').value);
+            if (!isNaN(value) && !isNaN(percentage)) {
+                const result = value * (1 + percentage / 100);
+                document.getElementById('increase-result').innerText = `결과: ${result}`;
+            } else {
+                document.getElementById('increase-result').innerText = '';
+            }
+        }
+
+        function calculateDecreasePercentage() {
+            const value = parseFloat(document.getElementById('decrease-value').value);
+            const percentage = parseFloat(document.getElementById('decrease-percentage-value').value);
+            if (!isNaN(value) && !isNaN(percentage)) {
+                const result = value * (1 - percentage / 100);
+                document.getElementById('decrease-result').innerText = `결과: ${result}`;
+            } else {
+                document.getElementById('decrease-result').innerText = '';
+            }
+        }
+
+        function calculateDifferencePercentage() {
+            const value1 = parseFloat(document.getElementById('difference-value1').value);
+            const value2 = parseFloat(document.getElementById('difference-value2').value);
+            if (!isNaN(value1) && !isNaN(value2)) {
+                const result = ((value2 - value1) / value1) * 100;
+                document.getElementById('difference-result').innerText = `결과: ${result}%`;
+            } else {
+                document.getElementById('difference-result').innerText = '';
+            }
+        }
+    </script>
 
 
 
